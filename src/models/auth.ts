@@ -19,9 +19,23 @@ const authSchemar = new mongoose.Schema(
     //   validate: [validate.isEmail, "Please enter valid email"],
     },
     password: {
-
       type: String,
       required: [true, "Please enter your password"]
+    },
+    role:{
+      type: String,
+      default: "user",
+      required: true
+    },
+    status: {
+      type: Boolean,
+      default: true,
+      required: true
+    },
+    order: {
+      type: Number,
+      default: 1,
+      required: true
     }
   },
   {
